@@ -3,6 +3,7 @@ import Container from "@/components/Container";
 import Logo from "@/components/Logo";
 
 const NAV = [
+  { href: "/manifesto", label: "Manifesto" },
   { href: "/thesis", label: "Thesis" },
   { href: "/method", label: "Method" },
   { href: "/agents", label: "Agents" },

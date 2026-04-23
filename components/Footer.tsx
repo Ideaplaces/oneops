@@ -18,6 +18,7 @@ export default function Footer() {
         <FooterColumn
           title="Framework"
           links={[
+            { href: "/manifesto", label: "Manifesto" },
             { href: "/thesis", label: "Thesis" },
             { href: "/method", label: "Method" },
             { href: "/agents", label: "Agents" },

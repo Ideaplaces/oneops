@@ -22,16 +22,17 @@ export default function Home() {
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[500px] bg-[radial-gradient(ellipse_at_top,rgba(67,56,202,0.35),transparent_70%)] pointer-events-none"
         />
         <Container size="lg" className="relative">
-          <p className="label-eyebrow">For founders running scale-ups</p>
+          <p className="label-eyebrow">A manifesto for founders running scale-ups</p>
           <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-bold leading-[1.05] tracking-tight text-[color:var(--color-foreground)] max-w-5xl mb-8">
-            Make your company one{" "}
-            <span className="text-[color:var(--color-accent)]">cohesive</span>{" "}
-            technological system.
+            We are no longer writing code.{" "}
+            <span className="text-[color:var(--color-accent)]">
+              We are summoning it.
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-[color:var(--color-foreground-muted)] leading-relaxed max-w-3xl mb-10">
-            OneOps is the operating substrate for founder-led scale-ups.
-            Cloud, identity, CRM, comms, marketing, tickets, payments, analytics —
-            one mesh, declared in one place.
+            OneOps is the practice that makes the summoning reliable. Declare
+            the company in code. Let AI flow into every space the structure
+            reveals. Humans return to the work only humans can do.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -90,7 +91,7 @@ export default function Home() {
       <Section>
         <p className="label-eyebrow">The idea</p>
         <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 max-w-3xl">
-          The technology is the heart of the company.
+          Make your company one cohesive technological system.
         </h2>
         <div className="grid md:grid-cols-2 gap-12 text-lg text-[color:var(--color-foreground-muted)] leading-relaxed">
           <p>
@@ -105,6 +106,35 @@ export default function Home() {
             They read across database, logs, source code, and deploys at once,
             surface what they find, and open a PR. The cohesive platform is
             precisely what makes this possible.
+          </p>
+        </div>
+        <div className="mt-8">
+          <Link
+            href="/manifesto"
+            className="text-[color:var(--color-accent)] hover:underline text-base font-medium"
+          >
+            Read the full manifesto →
+          </Link>
+        </div>
+      </Section>
+
+      {/* Humans for the humans */}
+      <Section className="bg-[color:var(--color-background-alt)]">
+        <div className="max-w-4xl">
+          <p className="label-eyebrow">The role of the human</p>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+            Humans for the humans.
+          </h2>
+          <p className="text-lg text-[color:var(--color-foreground-muted)] leading-relaxed mb-4">
+            We are no longer the ones who do the work. We are the ones who
+            make sure information travels correctly from one end of the
+            company to the other — from customer to system and back again.
+            AI writes the glue. Humans hold the intent and meet the customer.
+          </p>
+          <p className="text-lg text-[color:var(--color-foreground-muted)] leading-relaxed">
+            The code gets faster. The conversations get slower. That is the
+            right direction. OneOps is not about replacing people. It is about
+            returning people to the work only people can do.
           </p>
         </div>
       </Section>

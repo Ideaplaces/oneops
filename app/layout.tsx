@@ -26,11 +26,11 @@ const SITE_URL =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "OneOps — Make your company one cohesive system",
+    default: "OneOps — Summoning software into existence",
     template: "%s · OneOps",
   },
   description:
-    "OneOps is the operating substrate for founder-led scale-ups. Code where possible, AI where necessary, agents for the outliers. The whole company, declared in one place.",
+    "We are no longer writing code. We are summoning it. OneOps is the practice that makes the summoning reliable. Declare the company in code. Let AI flow into every space the structure reveals. Humans return to the work only humans can do.",
   keywords: [
     "OneOps",
     "company as code",
@@ -50,16 +50,16 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "OneOps",
-    title: "OneOps — Make your company one cohesive system",
+    title: "OneOps — Summoning software into existence",
     description:
-      "Code where possible, AI where necessary, agents for the outliers. The whole company, declared in one place.",
+      "Declare the company in code. Let AI flow into every space the structure reveals. Humans return to the work only humans can do.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OneOps — Make your company one cohesive system",
+    title: "OneOps — Summoning software into existence",
     description:
-      "Code where possible, AI where necessary, agents for the outliers.",
+      "Code where possible. AI where necessary. Agents for the outliers. Humans for the humans.",
   },
   alternates: {
     canonical: SITE_URL,
