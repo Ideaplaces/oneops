@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Pre-commit hook: fast local checks before a commit lands.
+# Activated via `npm install` (see the "prepare" script in package.json,
+# which sets core.hooksPath to .githooks).
+#
+# Skip with: git commit --no-verify  (only when you know what you are doing).
+
+set -e
+
+cd "$(git rev-parse --show-toplevel)"
+
+# Skip if no tracked JS/TS changes (e.g. docs-only commit).
+if ! git diff --cached --name-only --diff-filter=ACMR | grep -qE '\.(ts|tsx|js|jsx|mjs|cjs)$'; then
+  exit 0
+fi
+
+echo "[pre-commit] typecheck"
+npm run --silent typecheck
+
+echo "[pre-commit] lint"
+npm run --silent lint
