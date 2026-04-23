@@ -4,6 +4,7 @@ import Container from "@/components/Container";
 import Section from "@/components/Section";
 import CTA from "@/components/CTA";
 import AxiomCard from "@/components/AxiomCard";
+import { PROVEN_COMPANIES } from "@/lib/companies";
 
 export const metadata: Metadata = {
   title: "OneOps — Make your company one cohesive system",
@@ -195,11 +196,31 @@ export default function Home() {
         <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 max-w-3xl">
           The pattern already runs three companies.
         </h2>
-        <p className="text-lg text-[color:var(--color-foreground-muted)] leading-relaxed max-w-3xl mb-10">
-          Eli, Mentorly, Pivot: AI was the factory that wrote the code. The
-          crystallised code now runs each business. No live AI on the hot path.
-          No fractional team required. No proprietary runtime to rent.
+        <p className="text-lg text-[color:var(--color-foreground-muted)] leading-relaxed max-w-3xl mb-6">
+          AI was the factory that wrote the code. The crystallised code now
+          runs each business. No live AI on the hot path. No fractional team
+          required. No proprietary runtime to rent.
         </p>
+        <ul className="flex flex-wrap gap-3 mb-10">
+          {PROVEN_COMPANIES.map((c) => (
+            <li key={c.host}>
+              <a
+                href={c.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2 rounded-[var(--radius)] border border-[color:var(--color-border-light)] bg-[color:var(--color-surface)]/40 px-4 py-2 text-sm font-medium text-[color:var(--color-foreground)] hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)] transition"
+              >
+                <span aria-hidden="true" className="text-[color:var(--color-accent)] font-mono text-xs">
+                  ●
+                </span>
+                {c.name}
+                <span className="font-mono text-xs text-[color:var(--color-foreground-muted)]">
+                  {c.host}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
         <div className="grid gap-6 md:grid-cols-2">
           <Metric
             value="Code"
@@ -223,12 +244,13 @@ export default function Home() {
       </Section>
 
       <CTA
-        eyebrow="Engage"
-        title="Your company is already most of the way there. OneOps compiles the rest."
-        body="If you are a founder running a scale-up with multi-vendor tools and no platform team, we should talk. The first conversation is a read on where the console debt lives and what a compile would unlock."
-        primaryLabel="Start a conversation"
-        secondaryHref="/method"
-        secondaryLabel="See the method"
+        eyebrow="Self-serve"
+        title="A read on your own console debt. Ten questions, three minutes."
+        body="No email, no sign-up. Score your company against the OneOps axioms and leave with a one-page read on where the leverage is. The read is yours whether or not you continue with us."
+        primaryHref="/assess"
+        primaryLabel="Start the read"
+        secondaryHref="https://cal.com/ciprianrarau/oneops-intro"
+        secondaryLabel="Book a 30-min call instead"
       />
     </>
   );

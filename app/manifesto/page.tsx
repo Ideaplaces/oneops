@@ -157,7 +157,8 @@ export default function ManifestoPage() {
         eyebrow="Begin"
         title="Start building the DNA of your company in code."
         body="The first step is always the same: a read on what the company currently runs through clicks, tribal runbooks, and copy-paste. From there, the compile shows itself."
-        primaryLabel="Start a conversation"
+        primaryHref="/assess"
+        primaryLabel="Take the 3-minute read"
         secondaryHref="/thesis"
         secondaryLabel="See the 10 axioms"
       />

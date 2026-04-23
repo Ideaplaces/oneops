@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 import CTA from "@/components/CTA";
+import { PROVEN_COMPANIES } from "@/lib/companies";
 
 export const metadata: Metadata = {
   title: "Case studies",
@@ -45,12 +46,40 @@ export default function CaseStudiesPage() {
             </span>
           </Link>
 
-          <div className="rounded-[var(--radius-lg)] border border-dashed border-[color:var(--color-border-light)] bg-transparent p-8 text-center">
-            <p className="label-eyebrow mb-3">Coming</p>
-            <p className="font-serif text-xl text-[color:var(--color-foreground-muted)]">
-              More cases are added as external permissions are secured.
-            </p>
-          </div>
+        </div>
+      </Section>
+
+      <Section className="bg-[color:var(--color-background-alt)]">
+        <p className="label-eyebrow">Compiled in production</p>
+        <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 max-w-3xl">
+          Three companies running on the pattern.
+        </h2>
+        <p className="text-lg text-[color:var(--color-foreground-muted)] leading-relaxed max-w-3xl mb-10">
+          Each was built with AI as the factory. The code is compiled and
+          owned. Formal case studies (with permission-gated internals) will
+          follow. Until then, the sites themselves are the artifact.
+        </p>
+        <div className="grid gap-5 md:grid-cols-3">
+          {PROVEN_COMPANIES.map((c) => (
+            <a
+              key={c.host}
+              href={c.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="block rounded-[var(--radius-lg)] border border-[color:var(--color-border-light)] bg-[color:var(--color-surface)]/40 p-6 hover:border-[color:var(--color-accent)] transition group"
+            >
+              <p className="label-eyebrow mb-2">Compiled</p>
+              <h3 className="font-serif text-2xl font-bold text-[color:var(--color-foreground)] group-hover:text-[color:var(--color-accent)] mb-2 transition">
+                {c.name}
+              </h3>
+              <p className="text-sm text-[color:var(--color-foreground-muted)] mb-3 leading-relaxed">
+                {c.tagline}
+              </p>
+              <p className="font-mono text-xs text-[color:var(--color-accent)]">
+                {c.host} →
+              </p>
+            </a>
+          ))}
         </div>
       </Section>
 

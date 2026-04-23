@@ -5,6 +5,7 @@ const BASE =
 
 const ROUTES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }[] = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
+  { path: "/assess", changeFrequency: "monthly", priority: 0.95 },
   { path: "/manifesto", changeFrequency: "monthly", priority: 0.95 },
   { path: "/thesis", changeFrequency: "monthly", priority: 0.9 },
   { path: "/method", changeFrequency: "monthly", priority: 0.9 },

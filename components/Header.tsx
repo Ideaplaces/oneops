@@ -37,10 +37,10 @@ export default function Header() {
         </ul>
         <div className="flex items-center gap-3">
           <Link
-            href="/contact"
+            href="/assess"
             className="inline-flex items-center gap-2 rounded-[var(--radius)] border border-[color:var(--color-primary-light)] bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-light)] text-white px-4 py-2 text-sm font-medium shadow-[var(--shadow-glow)] transition"
           >
-            Start a conversation
+            Take the 3-min read
           </Link>
         </div>
       </Container>

@@ -31,7 +31,7 @@ export default function ContactPage() {
             eyebrow="Book a call"
             title="30 minutes, direct."
             body="Pick a slot. We walk through your current stack and agree on whether there is a compile worth scoping."
-            href="https://cal.com/chip-tech/oneops-intro"
+            href="https://cal.com/ciprianrarau/oneops-intro"
             label="See available slots →"
           />
           <ContactCard

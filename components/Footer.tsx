@@ -35,8 +35,9 @@ export default function Footer() {
         <FooterColumn
           title="Engage"
           links={[
-            { href: "/faq", label: "FAQ" },
+            { href: "/assess", label: "Take the read" },
             { href: "/contact", label: "Contact" },
+            { href: "/faq", label: "FAQ" },
             { href: "https://docs.ideaplaces.com/oneops", label: "Living docs →" },
           ]}
         />

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 import CTA from "@/components/CTA";
+import { PROVEN_COMPANIES } from "@/lib/companies";
 
 export const metadata: Metadata = {
   title: "Proof",
@@ -14,7 +15,7 @@ const CLAIMS: { claim: string; evidence: string }[] = [
   {
     claim: "The compiler pattern works at scale",
     evidence:
-      "Eli, Mentorly, Pivot: AI was the factory, the crystallised code now runs each business without live AI on the hot path.",
+      "eli.health, mentorly.com, pivotapp.ca: AI was the factory, the crystallised code now runs each business without live AI on the hot path.",
   },
   {
     claim: "Zero console clicks in the production path",
@@ -74,6 +75,40 @@ export default function ProofPage() {
                 {c.evidence}
               </p>
             </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <p className="label-eyebrow">The three compiled companies</p>
+        <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 max-w-3xl">
+          Running in production right now.
+        </h2>
+        <p className="text-lg text-[color:var(--color-foreground-muted)] leading-relaxed max-w-3xl mb-10">
+          Each of these businesses was built with AI as the factory. The code
+          is compiled, static, and owned. You can click through and see the
+          working results.
+        </p>
+        <div className="grid gap-5 md:grid-cols-3">
+          {PROVEN_COMPANIES.map((c) => (
+            <a
+              key={c.host}
+              href={c.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="block rounded-[var(--radius-lg)] border border-[color:var(--color-border-light)] bg-[color:var(--color-surface)]/40 p-6 hover:border-[color:var(--color-accent)] transition group"
+            >
+              <p className="label-eyebrow mb-2">Compiled</p>
+              <h3 className="font-serif text-2xl font-bold text-[color:var(--color-foreground)] group-hover:text-[color:var(--color-accent)] mb-2 transition">
+                {c.name}
+              </h3>
+              <p className="text-sm text-[color:var(--color-foreground-muted)] mb-3 leading-relaxed">
+                {c.tagline}
+              </p>
+              <p className="font-mono text-xs text-[color:var(--color-accent)]">
+                {c.host} →
+              </p>
+            </a>
           ))}
         </div>
       </Section>
