@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   turbopack: {
     // Pin the workspace root to this project so the lockfile detection
     // does not accidentally pick up ../package-lock.json.
