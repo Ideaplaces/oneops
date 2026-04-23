@@ -22,7 +22,7 @@ export default function ThesisPage() {
           </h1>
           <p className="text-xl text-[color:var(--color-foreground-muted)] leading-relaxed max-w-3xl">
             Ten axioms. Each earned from building and running real businesses
-            (<a href="https://eli.health" target="_blank" rel="noreferrer noopener" className="text-[color:var(--color-accent)] hover:underline">eli.health</a>, <a href="https://mentorly.com" target="_blank" rel="noreferrer noopener" className="text-[color:var(--color-accent)] hover:underline">mentorly.com</a>, <a href="https://pivotapp.ca" target="_blank" rel="noreferrer noopener" className="text-[color:var(--color-accent)] hover:underline">pivotapp.ca</a>). Each sets a constraint that the rest of the
+            (<a href="https://ideaplaces.com" target="_blank" rel="noreferrer noopener" className="text-[color:var(--color-accent)] hover:underline">ideaplaces.com</a>, <a href="https://eli.health" target="_blank" rel="noreferrer noopener" className="text-[color:var(--color-accent)] hover:underline">eli.health</a>, <a href="https://mentorly.com" target="_blank" rel="noreferrer noopener" className="text-[color:var(--color-accent)] hover:underline">mentorly.com</a>, <a href="https://pivotapp.ca" target="_blank" rel="noreferrer noopener" className="text-[color:var(--color-accent)] hover:underline">pivotapp.ca</a>). Each sets a constraint that the rest of the
             system composes with.
           </p>
         </Container>

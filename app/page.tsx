@@ -194,7 +194,7 @@ export default function Home() {
       <Section>
         <p className="label-eyebrow">Proof</p>
         <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 max-w-3xl">
-          The pattern already runs three companies.
+          The pattern already runs four companies.
         </h2>
         <p className="text-lg text-[color:var(--color-foreground-muted)] leading-relaxed max-w-3xl mb-6">
           AI was the factory that wrote the code. The crystallised code now

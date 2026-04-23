@@ -15,7 +15,7 @@ const CLAIMS: { claim: string; evidence: string }[] = [
   {
     claim: "The compiler pattern works at scale",
     evidence:
-      "eli.health, mentorly.com, pivotapp.ca: AI was the factory, the crystallised code now runs each business without live AI on the hot path.",
+      "ideaplaces.com, eli.health, mentorly.com, pivotapp.ca: AI was the factory, the crystallised code now runs each business without live AI on the hot path.",
   },
   {
     claim: "Zero console clicks in the production path",
@@ -80,7 +80,7 @@ export default function ProofPage() {
       </Section>
 
       <Section>
-        <p className="label-eyebrow">The three compiled companies</p>
+        <p className="label-eyebrow">The compiled companies</p>
         <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 max-w-3xl">
           Running in production right now.
         </h2>

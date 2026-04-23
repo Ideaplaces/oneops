@@ -7,6 +7,12 @@ export interface Company {
 
 export const PROVEN_COMPANIES: Company[] = [
   {
+    name: "IdeaPlaces",
+    url: "https://ideaplaces.com",
+    host: "ideaplaces.com",
+    tagline: "Portfolio of products, all running on the same compiled spine.",
+  },
+  {
     name: "Eli",
     url: "https://eli.health",
     host: "eli.health",
