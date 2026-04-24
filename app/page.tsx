@@ -7,9 +7,9 @@ import AxiomCard from "@/components/AxiomCard";
 import { PROVEN_COMPANIES } from "@/lib/companies";
 
 export const metadata: Metadata = {
-  title: "OneOps — Make your company one cohesive system",
+  title: "OneOps — Summoning software into existence",
   description:
-    "OneOps is the operating substrate for founder-led scale-ups. Code where possible, AI where necessary, agents for the outliers. The whole company, declared in one place.",
+    "We are no longer writing code. We are summoning it. OneOps is the practice that makes the summoning reliable. Declare the company in code. Let AI flow into every space the structure reveals. Humans return to the work only humans can do.",
 };
 
 export default function Home() {
