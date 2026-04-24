@@ -91,6 +91,28 @@ jobs:
           echo "Failed to become healthy after 150 seconds"
           exit 1
 
+      - name: Purge Cloudflare cache
+        env:
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ZONE_ID: ${{ vars.CLOUDFLARE_ZONE_ID }}
+        run: |
+          if [ -z "$CF_API_TOKEN" ] || [ -z "$CF_ZONE_ID" ]; then
+            echo "::warning::Cloudflare token or zone id not set; skipping cache purge"
+            exit 0
+          fi
+          RESPONSE=$(curl -s -X POST \
+            "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache" \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d '{"purge_everything":true}')
+          echo "$RESPONSE"
+          SUCCESS=$(echo "$RESPONSE" | python3 -c "import json,sys;print(json.load(sys.stdin).get('success',False))")
+          if [ "$SUCCESS" != "True" ]; then
+            echo "::error::Cloudflare purge failed"
+            exit 1
+          fi
+          echo "Cache purged."
+
       - name: Discord notification on failure
         if: failure()
         run: |
