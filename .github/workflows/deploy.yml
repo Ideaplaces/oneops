@@ -113,19 +113,13 @@ jobs:
           fi
           echo "Cache purged."
 
-      - name: Discord notification on failure
-        if: failure()
-        run: |
-          COMMIT_MSG=$(echo "${{ github.event.head_commit.message }}" | head -1 | sed 's/"/\\"/g')
-          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK_CHIP_LUCA }}" \
-            -H "Content-Type: application/json" \
-            -d "{
-              \"embeds\": [{
-                \"title\": \":x: oneops.cloud — Build failed\",
-                \"description\": \"**Commit:** ${COMMIT_MSG}\n**Branch:** main\n**By:** ${{ github.actor }}\",
-                \"url\": \"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\",
-                \"color\": 15158332,
-                \"footer\": {\"text\": \"production | oneops.cloud\"},
-                \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
-              }]
-            }"
+      - name: Discord CI status
+        if: always()
+        uses: Ideaplaces/discord-ci-status@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK_CHIP_LUCA }}
+          bot-token: ${{ secrets.DISCORD_BOT_TOKEN }}
+          status: ${{ job.status }}
+          title: oneops.cloud build failed
+          footer: production | oneops.cloud
+          mention: "<@908834861526175844>"
