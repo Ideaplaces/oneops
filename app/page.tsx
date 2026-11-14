@@ -249,7 +249,7 @@ export default function Home() {
         body="No email, no sign-up. Score your company against the OneOps axioms and leave with a one-page read on where the leverage is. The read is yours whether or not you continue with us."
         primaryHref="/assess"
         primaryLabel="Start the read"
-        secondaryHref="https://cal.com/ciprianrarau/oneops-intro"
+        secondaryHref="https://cal.com/ideaplaces/oneops-intro"
         secondaryLabel="Book a 30-min call instead"
       />
     </>
