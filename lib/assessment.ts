@@ -162,4 +162,4 @@ export function score(answers: Record<string, Scale | undefined>): Result {
   return { total, percent, bucket, bucketTitle, bucketBody, byCategory, weakest, strongest };
 }
 
-export const CAL_URL = "https://cal.com/ciprianrarau/oneops-intro";
+export const CAL_URL = "https://cal.com/ideaplaces/oneops-intro";
